@@ -1,45 +1,57 @@
-# Miscellaneous
-*.class
-*.log
+# ==================================================
+# BACKEND CEASA APP - IGNORAR ARQUIVOS SENSÍVEIS E TEMPORÁRIOS
+# ==================================================
+
+# --- Python ---
+__pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# --- Arquivos sensíveis ---
+.env
+*.key
+*.pem
+
+# --- Ambientes virtuais ---
+venv/
+env/
+
+# --- Logs e temporários ---
+*.log
+*.bak
+*.tmp
 *.swp
-.DS_Store
-.atom/
-.build/
-.buildlog/
-.history
-.svn/
-.swiftpm/
-migrate_working_dir/
 
-# IntelliJ related
-*.iml
-*.ipr
-*.iws
+# --- IDEs e editores ---
+.vscode/
 .idea/
+*.iml
+*.iws
+*.ipr
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# --- Arquivos gerados automaticamente ---
+downloads/
+boletim_*.xlsx
+boletim_*.csv
+*.pdf
+*.zip
 
-# Flutter/Dart/Pub related
+# --- Sistema operacional ---
+.DS_Store
+Thumbs.db
+
+# --- Flutter (caso backend e app estejam no mesmo repositório) ---
 **/doc/api/
 **/ios/Flutter/.last_build_id
 .dart_tool/
 .flutter-plugins-dependencies
 .pub-cache/
 .pub/
-/build/
-/coverage/
-
-# Symbolication related
-app.*.symbols
-
-# Obfuscation related
-app.*.map.json
-
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
+build/
+coverage/
+android/app/debug
+android/app/profile
+android/app/release
