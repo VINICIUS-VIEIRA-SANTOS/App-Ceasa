@@ -2,6 +2,8 @@ from fastapi import FastAPI, Depends
 from sqlalchemy.orm import Session
 from datetime import datetime
 from apscheduler.schedulers.background import BackgroundScheduler
+from routes import produtos, clientes, vendas, relatorios, usuarios, estoque, auth
+
 import time
 
 from database import SessionLocal
@@ -97,6 +99,12 @@ def startup_event():
 
 app.include_router(produtos.router)
 app.include_router(clientes.router)
+app.include_router(vendas.router)
+app.include_router(relatorios.router)
+app.include_router(usuarios.router)
+app.include_router(estoque.router)
+app.include_router(auth.router)
+
 
 
 # ======================================================

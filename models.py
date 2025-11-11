@@ -3,6 +3,7 @@ from sqlalchemy.orm import relationship
 from datetime import datetime
 from database import Base
 
+
 # =======================
 # TABELA: USUARIOS
 # =======================
@@ -51,6 +52,7 @@ class Produto(Base):
     unidade = Column(String(20))
     preco_compra = Column(DECIMAL(10, 2))
     preco_venda = Column(DECIMAL(10, 2))
+    quantidade_disponivel = Column(Integer, default=0)
     estoque_minimo = Column(Integer, default=0)
     data_cadastro = Column(DateTime, default=datetime.now)
 
